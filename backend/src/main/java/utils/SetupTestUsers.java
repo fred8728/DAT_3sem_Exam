@@ -14,6 +14,7 @@ public class SetupTestUsers {
     EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory(EMF_Creator.DbSelector.DEV, EMF_Creator.Strategy.CREATE);
     EntityManager em = emf.createEntityManager();
     
+    // ...
     // IMPORTAAAAAAAAAANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // This breaks one of the MOST fundamental security rules in that it ships with default users and passwords
     // CHANGE the three passwords below, before you uncomment and execute the code below
