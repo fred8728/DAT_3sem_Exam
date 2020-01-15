@@ -115,12 +115,12 @@ public class RestaurantFacade {
         }
     }
 
-    public Recipe getRecipeByTime(int time) {
+    public Recipe getRecipeById(int id) {
         EntityManager em = getEntityManager();
         try {
-            TypedQuery query
-                    = em.createQuery("SELECT r from Recipe r WHERE r.preparation_time=:time", Recipe.class);
-            return (Recipe) query.setParameter("time", time).getSingleResult();
+            Recipe recipe = em.find(Recipe.class, id);
+            return recipe;
+            
         } finally {
             em.close();
         }
@@ -329,7 +329,7 @@ List<Recipe> rec2 = new ArrayList();
         ingre3.add(ing16);
         ingre3.add(ing17);
         Recipe r4 = new Recipe("Burrito", ingre3, 55, "Fyld pandekagen med kød og luk den - dernæst salat og dressing ved siden af");
-        rec.add(r3);
+        rec.add(r4);
 
         Storage st15 = new Storage(10000);
         Storage st16 = new Storage(10000);
@@ -338,9 +338,9 @@ List<Recipe> rec2 = new ArrayList();
         r.addIngredient(ing15);
         r.addIngredient(ing16);
         r.addIngredient(ing17);
-        ing11.setItem(item15);
-        ing12.setItem(item16);
-        ing13.setItem(item17);
+        ing15.setItem(item15);
+        ing16.setItem(item16);
+        ing17.setItem(item17);
         item15.setStorage(st15);
         item16.setStorage(st16);
         item17.setStorage(st17);

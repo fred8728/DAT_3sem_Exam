@@ -24,7 +24,7 @@ import utils.Settings;
 import utils.EMF_Creator.DbSelector;
 import utils.EMF_Creator.Strategy;
 
-//@Disabled
+@Disabled
 public class RestaurantFacadeTest {
 
     private static EntityManagerFactory emf;

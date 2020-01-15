@@ -79,10 +79,10 @@ public class RestaurantResource {
     }
 
     @GET
-    @Path("recipes/{name}")
+    @Path("recipes/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getRecipeByName(@PathParam("name") String name) {
-        return gson.toJson(facade.getRecipeByName(name));
+    public Recipe getRecipeById(@PathParam("id") int id) {
+        return facade.getRecipeById(id);
     }
 
     @DELETE

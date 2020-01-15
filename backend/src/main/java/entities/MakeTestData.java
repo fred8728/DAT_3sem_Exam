@@ -186,7 +186,7 @@ public class MakeTestData {
         //System.out.println(facade.getCountOfRecipes());
 
         
-        System.out.println(facade.getRecipeByTime(r.getPreparation_time()));
+        System.out.println(facade.getRecipeById(r.getRecipe_id()));
         System.out.println(facade.getRecipeByName("Spaghetti Kødsovs "));
     }
 }
