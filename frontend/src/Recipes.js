@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
 import apiFacade from "./apiFacade";
-import {
-  //BrowserRouter,
-  useRouteMatch,
-  Link
-} from "react-router-dom";
 import Search from "./Search";
 
 // Spørgsmål: <td>{data.weekMenu.menu_id}</td>
