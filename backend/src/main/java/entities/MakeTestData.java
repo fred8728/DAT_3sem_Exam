@@ -182,7 +182,7 @@ public class MakeTestData {
         System.out.println(facade.getAllRecipes());
         System.out.println(facade.getWeekMenuPlans());
         System.out.println(facade.getCountOfRecipes());
-        //facade.deleteRecipe(1);
+        //facade.deleteRecipe(2);
         //System.out.println(facade.getCountOfRecipes());
 
         

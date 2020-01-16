@@ -51,7 +51,7 @@ function ApiFacade() {
       opts.body = JSON.stringify(body);
     }
     return opts;
-  }
+  // }
 
   const getRecipes = () => {
     const options = makeOptions("GET", true); //True add's the token

@@ -120,7 +120,7 @@ public class RestaurantFacade {
         try {
             Recipe recipe = em.find(Recipe.class, id);
             return recipe;
-            
+
         } finally {
             em.close();
         }
@@ -140,8 +140,8 @@ public class RestaurantFacade {
 
     public void dataToDatabase() {
         EntityManager em = emf.createEntityManager();
-List<Recipe> rec = new ArrayList();
-List<Recipe> rec2 = new ArrayList();
+        List<Recipe> rec = new ArrayList();
+        List<Recipe> rec2 = new ArrayList();
         //Recipe 1
         Item it1 = new Item("Gulerødder", 30);
         Item it2 = new Item("Æble", 20);
@@ -167,6 +167,7 @@ List<Recipe> rec2 = new ArrayList();
         ingree1.setItem(it2);
         it1.setStorage(stor1);
         it2.setStorage(stor2);
+        
 
         // Recipe 2
         Item item = new Item("Spaghetti", 30);
@@ -271,7 +272,7 @@ List<Recipe> rec2 = new ArrayList();
         item8.setStorage(st7);
         item9.setStorage(st8);
         item10.setStorage(st9);
-        
+
         //Recipe 5
         Item item11 = new Item("Salat", 30);
         Item item12 = new Item("Kylling", 350);
@@ -311,8 +312,7 @@ List<Recipe> rec2 = new ArrayList();
         item12.setStorage(st12);
         item13.setStorage(st13);
         item14.setStorage(st14);
-        
-        
+
         //Recipe 6
         Item item15 = new Item("Oksekød", 400);
         Item item16 = new Item("Pandekager", 350);
@@ -344,7 +344,7 @@ List<Recipe> rec2 = new ArrayList();
         item15.setStorage(st15);
         item16.setStorage(st16);
         item17.setStorage(st17);
-        
+
         //Recipe 7
         Item item19 = new Item("Kagecreme", 400);
         Item item20 = new Item("Tærtebund", 350);
@@ -384,7 +384,7 @@ List<Recipe> rec2 = new ArrayList();
         item20.setStorage(st20);
         item21.setStorage(st21);
         item22.setStorage(st22);
-        
+
         //Recipe 8
         Item item23 = new Item("Pita", 600);
         Item item24 = new Item("Shawarma", 800);
@@ -424,14 +424,14 @@ List<Recipe> rec2 = new ArrayList();
         item24.setStorage(st24);
         item25.setStorage(st25);
         item26.setStorage(st26);
-        
+
         //Recipe 9
         Item item27 = new Item("Kaffe", 900);
         Item item28 = new Item("Mælk", 200);
         List<Item> items7 = new ArrayList();
         items7.add(item27);
         items7.add(item28);
-        Ingredient ing27= new Ingredient(item27, item23.getPrice_kg());
+        Ingredient ing27 = new Ingredient(item27, item23.getPrice_kg());
         Ingredient ing28 = new Ingredient(item28, item24.getPrice_kg());
         List<Ingredient> ingre6 = new ArrayList();
         ingre6.add(ing23);
@@ -448,14 +448,14 @@ List<Recipe> rec2 = new ArrayList();
         ing28.setItem(item28);
         item27.setStorage(st27);
         item28.setStorage(st28);
-        
+
         //Recipe 10
         Item item29 = new Item("Brød", 100);
         Item item30 = new Item("Pølse", 200);
         List<Item> items8 = new ArrayList();
         items8.add(item27);
         items8.add(item28);
-        Ingredient ing29= new Ingredient(item29, item29.getPrice_kg());
+        Ingredient ing29 = new Ingredient(item29, item29.getPrice_kg());
         Ingredient ing30 = new Ingredient(item30, item30.getPrice_kg());
         List<Ingredient> ingre7 = new ArrayList();
         ingre7.add(ing23);
@@ -485,7 +485,7 @@ List<Recipe> rec2 = new ArrayList();
         r6.addWeekMenu(wmp1);
         r7.addWeekMenu(wmp1);
         r8.addWeekMenu(wmp1);
-        
+
         try {
             em.getTransaction().begin();
             em.persist(r);
