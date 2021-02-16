@@ -43,7 +43,6 @@ public class RestaurantFacadeTest {
     public static void setUpClass() {
         emf = EMF_Creator.createEntityManagerFactory(DbSelector.TEST, Strategy.DROP_AND_CREATE);
         facade = RestaurantFacade.getRestaurantFacade(emf);
-
     }
 
     @BeforeEach
